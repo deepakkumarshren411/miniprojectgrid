@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortfolioGrid</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    
+    }
+    
+    ::selection {
+      background-color: #fff;
+    }
+    
+    body {
+      font-family: "Bodoni Moda", serif;
+      font-size: 1.2rem;
+    }
+    
+    .container {
+      min-height: 100vh;
+      justify-content: space-evenly;
+      align-items: center;
+      display: flex;
+      /* flex-direction: column; */
+      gap: 20px;
+      background: linear-gradient(to right, #041007, #258943);
+    }
+    
+    .left-text {
+      flex-basis: 30%;
+      
+    }
+    
+    .galery {
+      flex-basis: 50%;
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 125px;
+    
+    }
+    
+    .heading {
+      font-size: 3rem;
+      color: #fff;
+      text-align: center;
+    
+    }
+    
+    .subheading {
+      color: #fff;
+      font-weight: lighter;
+      margin-top: 10px;
+      text-align: center;
+    
+    }
+    
+    .box {
+      background-size: cover;
+      background-position: top;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      background-blend-mode: hard-light;
+      transition:  all 1s ease-in-out;
+      cursor: pointer;
+      /* transform: scale(1.1); */
+    }
+    
+    .row-2 {
+      grid-row: span 2;
+    
+    }
+    
+    .col-2 {
+      grid-column: span 2;
+    }
+    
+    .box:hover {
+      background-color: #9c999946;
+      background-position: 0% 50% ;
+      box-shadow: inset -50px -50px 100px rgba(127, 88, 88, 0.123), inset 50px 50px 100
+    }
+    @media screen and (max-width:1024px) {
+          .container{
+            flex-direction: column;
+            padding-block: 20px;
+    
+          }
+          .galery{
+            width: 100%;
+            padding-inline: 12px;
+            grid-auto-rows: 225px;
+    
+          }
+          .box{
+            grid-row:span 1;
+            grid-column: span 3;
+          }
+        }
+    </style>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-text">
+      <h2 class="heading">My Portfolio Grid</h2>
+      <p class="subheading">
+        मानव का पहला धर्म प्रकृति संरक्षण होना चाहिए क्योंकि प्रकृति जब विकराल
+        रूप धारण करती है, तो इसकी चपेट में मानव की महत्वाकांक्षाएं ही आती
+        हैं।”
+      </p>
+    </div>
+    <div class="galery">
+      <div class="box row-2"style="
+            background-image: url(https://images.unsplash.com/photo-1594486959076-7f2fc824dd75?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+          ">
+        Nature
+      </div>
+      <div class="box col-2" style="
+            background-image: url(https://media.istockphoto.com/id/1341288649/photo/75mpix-panorama-of-beautiful-mount-ama-dablam-in-himalayas-nepal.jpg?s=2048x2048&w=is&k=20&c=tYXX52oUSiV5_FPTEyReC8XoY1tx4hPhDBvfZNtzg8w=);
+          ">
+        Mountain
+      </div>
+      <div class="box" style="
+            background-image: url(https://images.unsplash.com/photo-1586348943529-beaae6c28db9?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+          ">
+        Sunset
+      </div>
+      <div class="box row-2" style="
+            background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+          ">
+        Forest
+      </div>
+      <div class="box col-2"
+        style="background-image: url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+        Sea</div>
+      <div class="box"
+        style="background-image: url(https://images.unsplash.com/photo-1575550959106-5a7defe28b56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+        wildlife</div>
+      <div class="box col-2"
+        style="background-image: url(https://images.unsplash.com/photo-1494548162494-384bba4ab999?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+        Sunrise</div>
+    </div>
+  </div>
+</body>
+
+</html>
